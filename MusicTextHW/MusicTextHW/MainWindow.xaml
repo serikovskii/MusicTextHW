@@ -1,0 +1,28 @@
+﻿<Window x:Class="MusicTextHW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicTextHW"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+        <Button Name="openFile" Content="Open File" Width="100" Height="40" Click="OpenFile" Margin="20"/>
+        <Button Name="play" Content="Play" Width="100" Height="40" Click="PlyaMusic" Margin="20"/>
+        </StackPanel>
+            <TextBox Text="Блокнот" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10" FontSize="30"></TextBox>
+        <RichTextBox x:Name="note" Grid.Column="1" BorderThickness="2" BorderBrush="LightGray" Background="PapayaWhip" HorizontalAlignment="Center" Height="350" Margin="65,57,63,0" VerticalAlignment="Top" Width="400">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</Window>
